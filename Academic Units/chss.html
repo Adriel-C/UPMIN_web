@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="acadstyle.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<header>
+  <center>
+    <div>
+      <!-- UP mindanao logo -->
+    <img src="logo.png" style="width:150px;" class="img-fluid mx-auto d-block"/>
+  </div>
+    <table>
+      <tr>
+        <td>
+          <!-- Menu bar for HOME -->
+          <a id="navtabs" href="..\home.html"> HOME </a>
+          </td>
+        </tr>
+    </table>
+    <table>
+      <tr>
+          <td>
+            <!-- Menu bar for Academic Programs -->
+            <a  id="navtabs"href="..\Academic Programs\AcademicPrograms.html"> ACEDEMIC PROGRAMS </a>
+          </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <div class="demo">
+
+        <form action="#">
+        <fieldset>
+        <!-- Menu Bar for Academic Units -->
+        <!-- With dropdown -->
+        <label for="speed" id="lspeed">ACEDEMIC UNITS</label>
+        <div id="hs">
+        <select name="speed" id="speed" onchange="mion()">
+          <option selected="selected" value="Pick One"></option>
+          <!-- Onclicking each option, another window will open -->
+          <!-- CHSS -->
+          <option value="chss.html">College of Humanities and Social Sciences</option>
+          <!-- CSM -->
+          <option value="csm.html">College of Science and Mathematics</option>
+          <!-- SoM -->
+          <option value="som.html">School of Management</option>
+        </select>
+        </div>
+        </fieldset>
+        </form>
+
+        </div>
+        </td>
+      </tr>
+    </table>
+      <table>
+        <tr>
+          <td>
+            <!-- Menu bar for Sign-up -->
+            <a  id="navtabs"href="../signup.html"> SIGN UP </a>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </header>
+<!-- Start of Body -->
+  <body>
+<!-- UPMIN logo and Name -->
+    <center>
+      <div style="margin-top:30px;">
+    <img src="upmin logo.png" class="img-fluid mx-auto d-block"/>
+    </div>
+    </center>
+  <!-- Main Section -->
+    <div class="bg">
+      <center>
+      <!-- CHSS Part -->
+      <div class="myBody container-sm container-md container-lg container-xl">
+          <div class="chss" id="chss">
+            <span class="imgdiv">
+              <img src="chss.png" class="unitImg mx-auto d-block" id="unitImg">
+            </span>
+            <span class="child">
+              <h4>College of Humanities and Social Sciences</h4>
+              <p class="desc">The College of Humanities and Social Sciences is one of the two colleges that evolved out of the first undergraduate unit of UP in Mindanao, the College of Arts and Sciences.
+              <p class="desc">Its initial undergraduate offerings were BA English (Creative Writing) and BA Social Science (Behavioral Science).
+                Currently, CHSS has four undergraduate offerings, namely, BS Anthropology, BA Communication Arts, BA English (Creative Writing), and BS Architecture.</p>
+            </span>
+          </div>
+      </div>
+    </div>
+    </center>
+    </div> <!-- End of Main Section -->
+
+<script type="text/javascript" src="../bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="libraries/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="libraries/jqueryui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="libraries/jqueryui/jquery-ui.js"></script>
+    <script type="text/javascript">
+    $( function() {
+        $( "#hs" ).hide();
+    } );
+    $("#lspeed").click(function(){
+      $( function() {
+          $( "#speed" ).selectmenu();
+      } );
+    $("#hs").toggle();
+    });
+    function mion(){
+      let url = document.getElementById("speed").value;
+      window.open(url);
+    }
+    </script>
+  </body>
+</html>
